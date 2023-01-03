@@ -1,0 +1,26 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.7.0'
+        gradleVersion = '7.3.0'
+    }
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+    }
+}
+
+ext {
+    // Android SDK versions
+    minSdkVersion = 23
+    targetSdkVersion = 33
+    compileSdkVersion = 33
+
+    // Compose
+    composeVersion = '1.2.0'
+}

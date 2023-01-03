@@ -17,7 +17,7 @@ fun Modifier.optionable(
         selected = selected,
         enabled = enabled,
         role = role,
-        onClick = { onClick(!selected) }
+        onClick = { onClick(true) }
     )
     Role.Checkbox, Role.Switch -> this.toggleable(
         value = selected,
@@ -42,7 +42,7 @@ fun Modifier.optionable(
         indication = indication,
         enabled = enabled,
         role = role,
-        onClick = { onClick(!selected) }
+        onClick = { onClick(true) }
     )
     Role.Checkbox, Role.Switch -> this.toggleable(
         value = selected,

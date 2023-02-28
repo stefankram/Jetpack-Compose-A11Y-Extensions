@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-fun Theme(content: @Composable () -> Unit) {
+internal fun Theme(content: @Composable () -> Unit) {
     MaterialTheme(
         content = {
             Box(modifier = Modifier.background(Theme.colors.background)) {
@@ -18,4 +18,4 @@ fun Theme(content: @Composable () -> Unit) {
     )
 }
 
-val Theme: MaterialTheme = MaterialTheme
+internal val Theme: MaterialTheme = MaterialTheme

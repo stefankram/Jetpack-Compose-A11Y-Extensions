@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Examples</string>
+    <string name="examples_app_name">Jetpack Compose A11Y Examples</string>
+
+    <string name="examples_nav_host_home_route_title">Jetpack Compose A11Y Examples</string>
+    <string name="examples_nav_host_clickable_button_examples_route_title">Clickable Button Examples</string>
+    <string name="examples_nav_host_optionable_examples_route_title">Optionable Examples</string>
+    <string name="examples_nav_host_optionable_group_examples_route_title">Optionable Group Examples</string>
+    <string name="examples_nav_host_tappable_examples_route_title">Tappable Examples</string>
+
+    <string name="examples_home_clickable_button_cta">Clickable Button</string>
+    <string name="examples_home_optionable_cta">Optionable</string>
+    <string name="examples_home_optionable_group_cta">Optionable Group</string>
+    <string name="examples_home_tappable_cta">Tappable</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.stefankram.compose.a11y.examples
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,20 +19,16 @@ import com.stefankram.compose.a11y.examples.util.showToast
 import com.stefankram.compose.a11y.extensions.clickableButton
 import com.stefankram.compose.a11y.extensions.combinedClickableButton
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
-internal fun ClickableButtonExample() {
+internal fun ClickableButtonExamples() {
     val context = LocalContext.current
 
-    Column(
-        modifier = Modifier.padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Box(
             modifier = Modifier
                 .clip(Theme.shapes.medium)
                 .background(Theme.colors.primary, Theme.shapes.medium)
-                .clickableButton { showToast(context, "Clicked!") }
+                .clickableButton { context.showToast("Clicked!") }
                 .padding(12.dp)
                 .fillMaxWidth(),
             contentAlignment = Alignment.Center
@@ -47,18 +42,18 @@ internal fun ClickableButtonExample() {
         Box(
             modifier = Modifier
                 .clip(Theme.shapes.medium)
-                .background(Theme.colors.secondary, Theme.shapes.medium)
+                .background(Theme.colors.primary, Theme.shapes.medium)
                 .combinedClickableButton(
-                    onLongClick = { showToast(context, "Long clicked!") },
-                    onDoubleClick = { showToast(context, "Double clicked!") },
-                    onClick = { showToast(context, "Clicked!") }
+                    onLongClick = { context.showToast("Long clicked!") },
+                    onDoubleClick = { context.showToast("Double clicked!") },
+                    onClick = { context.showToast("Clicked!") }
                 )
                 .padding(12.dp)
                 .fillMaxWidth(),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                color = Theme.colors.onSecondary,
+                color = Theme.colors.onPrimary,
                 text = "Combined Clickable"
             )
         }
@@ -67,8 +62,8 @@ internal fun ClickableButtonExample() {
 
 @Preview
 @Composable
-fun ClickableButtonExamplePreview() {
+private fun ClickableButtonExamplePreview() {
     Theme {
-        ClickableButtonExample()
+        ClickableButtonExamples()
     }
 }
